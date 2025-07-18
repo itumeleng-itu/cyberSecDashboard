@@ -1,0 +1,283 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #020024;
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+.navigation {
+    background: linear-gradient(17deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    height: 100px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .logo {
+        background-image: url("images/Gemini_Generated_Image_3e306t3e306t3e30.png");
+        background-size: cover;
+        background-position: center;
+        height: 60px;
+        width: 60px;
+        border: 5px solid #00ffff;
+        border-radius: 50%;
+        padding: 5px;
+        box-shadow: 0 0 15px rgb(7, 221, 221);
+    }
+    .status {
+        text-align: center;
+        h3 {
+            color: white;
+            font-weight: bolder;
+            font-size: 2em;
+            text-shadow: 0 0 10px grey;
+            margin-bottom: 5px;
+        }
+        b {
+            color: white;
+            font-size: 1.1em;
+        }
+    }
+}
+
+.header {
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    h1 {
+        color: white;
+        font-weight: bolder;
+        font-size: 2.5em;
+        text-shadow: 0 0 15px rgba(236, 236, 243, 0.7);
+        margin-bottom: 10px;
+    }
+    p {
+        color: #a0a0a0;
+        font-size: 1.2em;
+    }
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    .dashboard {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+    .card {
+        background: transparent;
+        border: 2px solid rgb(10, 184, 233);
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .card:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0 12px 40px lightblue;
+        border-color: whitesmoke;
+    }
+    .card-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .card-icon {
+        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 255, 255, 0.1);
+        border-radius: 15px;
+        border: 1px solid rgba(0, 255, 255, 0.3);
+        color: #00ffff; /* Color the emoji/icon */
+    }
+    .card-title {
+        font-size: x-large;
+        font-weight: bolder;
+        color: white;
+    }
+    .card-description {
+        color: #b0b0b0;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+    .metrics {
+        margin-bottom: 20px;
+        .value {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #00ff00;
+            margin-bottom: 0.5rem;
+        }
+        .label {
+            color: whitesmoke;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+.indicators {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap; 
+    .indicator {
+        flex: 1;
+        min-width: 100px;
+        text-align: center;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .status {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .indicator-label {
+        font-size: 0.8rem;
+        color: #a0a0a0;
+    }
+    .indicator-value {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ffffff;
+    }
+}
+
+
+.chart-container {
+    height: 180px;
+    margin-top: 1rem;
+    position: relative;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    .bar-chart {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+        gap: 8px;
+        padding: 0 5px;
+    }
+    .bar {
+        flex: 1; 
+        background: linear-gradient(to top, lightblue, lightgreen);
+        border-radius: 4px 4px 0 0;
+        min-height: 10px;
+    }
+    .line-chart-placeholder {
+        width: 100%;
+        height: 80%;
+        background: repeating-linear-gradient(45deg,rgba(0, 255, 255, 0.1),rgba(0, 255, 255, 0.1) 10px,transparent 10px,transparent 20px),
+        linear-gradient(to right,lightblue,lightgreen);
+        border-radius: 5px;
+        box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+    .pie-chart-placeholder {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: conic-gradient(#00ff00 0% 65%,blue 65% 90%,#ff4444 90% 100%);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+}
+
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-container {
+        padding: 1rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    .navigation .logo {
+        margin-bottom: 10px;
+    }
+
+    .navigation .status h3 {
+        font-size: 1.5em;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .metric-value {
+        font-size: 2.5rem;
+    }
+
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+
+    .indicators {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        padding: 0.5rem;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .header p {
+        font-size: 1em;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .metric-value {
+        font-size: 2rem;
+    }
+}
